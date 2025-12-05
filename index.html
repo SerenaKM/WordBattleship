@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Battleship</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./wordbattleship.js" defer></script>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <button class="menu-settings" alt="menu-settings">
+        <svg
+          width="50px"
+          height="50px"
+          viewBox="0 0 21 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 4.5C0 3.67031 0.670312 3 1.5 3H19.5C20.3297 3 21 3.67031 21 4.5C21 5.32969 20.3297 6 19.5 6H1.5C0.670312 6 0 5.32969 0 4.5ZM0 12C0 11.1703 0.670312 10.5 1.5 10.5H19.5C20.3297 10.5 21 11.1703 21 12C21 12.8297 20.3297 13.5 19.5 13.5H1.5C0.670312 13.5 0 12.8297 0 12ZM21 19.5C21 20.3297 20.3297 21 19.5 21H1.5C0.670312 21 0 20.3297 0 19.5C0 18.6703 0.670312 18 1.5 18H19.5C20.3297 18 21 18.6703 21 19.5Z"
+            fill="var(--lavender-blossom)"
+          />
+          />
+        </svg>
+      </button>
+
+      <h1 class="brand">Word Battleship</h1>
+
+      <button class="hint" alt="hint">
+        <svg
+          width="50px"
+          height="50px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+        >
+          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="timer">
+      <h2>Timer:</h2>
+      <p>00 : 00 : 00</p>
+    </div>
+
+    <div class="game-buttons">
+      <button class="button" alt="play-button">
+        <svg
+          width="50px"
+          height="50px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+        >
+          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="scoreboard">
+      <div class="grid-letter" id="letter-0"></div>
+      <div class="grid-letter" id="letter-1">1</div>
+      <div class="grid-letter" id="letter-2">2</div>
+      <div class="grid-letter" id="letter-3">3</div>
+      <div class="grid-letter" id="letter-4">4</div>
+      <div class="grid-letter" id="letter-5">5</div>
+      <div class="grid-letter" id="letter-6">6</div>
+      <div class="grid-letter" id="letter-7">7</div>
+      <div class="grid-letter" id="letter-8">8</div>
+      <div class="grid-letter" id="letter-9">9</div>
+      <div class="grid-letter" id="letter-10">10</div>
+
+      <div class="grid-letter" id="letter-A">A</div>
+      <div class="scoreboard-letter" id="letter-A1"></div>
+      <div class="scoreboard-letter" id="letter-A2"></div>
+      <div class="scoreboard-letter" id="letter-A3"></div>
+      <div class="scoreboard-letter" id="letter-A4"></div>
+      <div class="scoreboard-letter" id="letter-A5"></div>
+      <div class="scoreboard-letter" id="letter-A6"></div>
+      <div class="scoreboard-letter" id="letter-A7"></div>
+      <div class="scoreboard-letter" id="letter-A8"></div>
+      <div class="scoreboard-letter" id="letter-A9"></div>
+      <div class="scoreboard-letter" id="letter-A10"></div>
+
+      <div class="grid-letter" id="letter-B">B</div>
+      <div class="scoreboard-letter" id="letter-B1"></div>
+      <div class="scoreboard-letter" id="letter-B2"></div>
+      <div class="scoreboard-letter" id="letter-B3"></div>
+      <div class="scoreboard-letter" id="letter-B4"></div>
+      <div class="scoreboard-letter" id="letter-B5"></div>
+      <div class="scoreboard-letter" id="letter-B6"></div>
+      <div class="scoreboard-letter" id="letter-B7"></div>
+      <div class="scoreboard-letter" id="letter-B8"></div>
+      <div class="scoreboard-letter" id="letter-B9"></div>
+      <div class="scoreboard-letter" id="letter-B10"></div>
+
+      <div class="grid-letter" id="letter-C">C</div>
+      <div class="scoreboard-letter" id="letter-C1"></div>
+      <div class="scoreboard-letter" id="letter-C2"></div>
+      <div class="scoreboard-letter" id="letter-C3"></div>
+      <div class="scoreboard-letter" id="letter-C4"></div>
+      <div class="scoreboard-letter" id="letter-C5"></div>
+      <div class="scoreboard-letter" id="letter-C6"></div>
+      <div class="scoreboard-letter" id="letter-C7"></div>
+      <div class="scoreboard-letter" id="letter-C8"></div>
+      <div class="scoreboard-letter" id="letter-C9"></div>
+      <div class="scoreboard-letter" id="letter-C10"></div>
+
+      <div class="grid-letter" id="letter-D">D</div>
+      <div class="scoreboard-letter" id="letter-D1"></div>
+      <div class="scoreboard-letter" id="letter-D2"></div>
+      <div class="scoreboard-letter" id="letter-D3"></div>
+      <div class="scoreboard-letter" id="letter-D4"></div>
+      <div class="scoreboard-letter" id="letter-D5"></div>
+      <div class="scoreboard-letter" id="letter-D6"></div>
+      <div class="scoreboard-letter" id="letter-D7"></div>
+      <div class="scoreboard-letter" id="letter-D8"></div>
+      <div class="scoreboard-letter" id="letter-D9"></div>
+      <div class="scoreboard-letter" id="letter-D10"></div>
+
+      <div class="grid-letter" id="letter-E">E</div>
+      <div class="scoreboard-letter" id="letter-E1"></div>
+      <div class="scoreboard-letter" id="letter-E2"></div>
+      <div class="scoreboard-letter" id="letter-E3"></div>
+      <div class="scoreboard-letter" id="letter-E4"></div>
+      <div class="scoreboard-letter" id="letter-E5"></div>
+      <div class="scoreboard-letter" id="letter-E6"></div>
+      <div class="scoreboard-letter" id="letter-E7"></div>
+      <div class="scoreboard-letter" id="letter-E8"></div>
+      <div class="scoreboard-letter" id="letter-E9"></div>
+      <div class="scoreboard-letter" id="letter-E10"></div>
+
+      <div class="grid-letter" id="letter-F">F</div>
+      <div class="scoreboard-letter" id="letter-F1"></div>
+      <div class="scoreboard-letter" id="letter-F2"></div>
+      <div class="scoreboard-letter" id="letter-F3"></div>
+      <div class="scoreboard-letter" id="letter-F4"></div>
+      <div class="scoreboard-letter" id="letter-F5"></div>
+      <div class="scoreboard-letter" id="letter-F6"></div>
+      <div class="scoreboard-letter" id="letter-F7"></div>
+      <div class="scoreboard-letter" id="letter-F8"></div>
+      <div class="scoreboard-letter" id="letter-F9"></div>
+      <div class="scoreboard-letter" id="letter-F10"></div>
+
+      <div class="grid-letter" id="letter-G">G</div>
+      <div class="scoreboard-letter" id="letter-G1"></div>
+      <div class="scoreboard-letter" id="letter-G2"></div>
+      <div class="scoreboard-letter" id="letter-G3"></div>
+      <div class="scoreboard-letter" id="letter-G4"></div>
+      <div class="scoreboard-letter" id="letter-G5"></div>
+      <div class="scoreboard-letter" id="letter-G6"></div>
+      <div class="scoreboard-letter" id="letter-G7"></div>
+      <div class="scoreboard-letter" id="letter-G8"></div>
+      <div class="scoreboard-letter" id="letter-G9"></div>
+      <div class="scoreboard-letter" id="letter-G10"></div>
+
+      <div class="grid-letter" id="letter-H">H</div>
+      <div class="scoreboard-letter" id="letter-H1"></div>
+      <div class="scoreboard-letter" id="letter-H2"></div>
+      <div class="scoreboard-letter" id="letter-H3"></div>
+      <div class="scoreboard-letter" id="letter-H4"></div>
+      <div class="scoreboard-letter" id="letter-H5"></div>
+      <div class="scoreboard-letter" id="letter-H6"></div>
+      <div class="scoreboard-letter" id="letter-H7"></div>
+      <div class="scoreboard-letter" id="letter-H8"></div>
+      <div class="scoreboard-letter" id="letter-H9"></div>
+      <div class="scoreboard-letter" id="letter-H10"></div>
+    </div>
+  </body>
+</html>
