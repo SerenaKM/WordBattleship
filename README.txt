@@ -3,7 +3,7 @@ Title of the project: Using HTML, CSS and JavaScript to create a Word Battleship
 Name: Serena KM
 
 Idea: 
-•	I want to create a battleship game 
+•	I want to create a battleship game where the computer generates words as battleships and the player has to guess the word and position
 
 Reflection (process, challenges, successes, learnings):
 •	Learning not to confuse justify-items and justify-content!
