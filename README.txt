@@ -7,6 +7,7 @@ Idea:
 
 Reflection (process, challenges, successes, learnings):
 •	Learning not to confuse justify-items and justify-content!
+•	Watching out for trailing spaces!
 
 List of dependencies for your project, including any libraries or packages the code relies on:
 •	Battleship words from Kaggle - https://www.kaggle.com/datasets/rtatman/english-word-frequency

@@ -10,45 +10,26 @@
 
   <body>
     <header class="navbar">
-      <button class="menu-settings" alt="menu-settings">
-        <svg
-          width="50px"
-          height="50px"
-          viewBox="0 0 21 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 4.5C0 3.67031 0.670312 3 1.5 3H19.5C20.3297 3 21 3.67031 21 4.5C21 5.32969 20.3297 6 19.5 6H1.5C0.670312 6 0 5.32969 0 4.5ZM0 12C0 11.1703 0.670312 10.5 1.5 10.5H19.5C20.3297 10.5 21 11.1703 21 12C21 12.8297 20.3297 13.5 19.5 13.5H1.5C0.670312 13.5 0 12.8297 0 12ZM21 19.5C21 20.3297 20.3297 21 19.5 21H1.5C0.670312 21 0 20.3297 0 19.5C0 18.6703 0.670312 18 1.5 18H19.5C20.3297 18 21 18.6703 21 19.5Z"
-            fill="var(--lavender-blossom)"
-          />
-          />
-        </svg>
-      </button>
-
       <h1 class="brand">Word Battleship</h1>
 
-      <button class="hint" alt="hint">
-        <svg
-          width="50px"
-          height="50px"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 640"
-        >
-          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-          <path
-            d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
-          />
-        </svg>
-      </button>
+      <div class="score">
+        <h2>Score</h2>
+        <div class="digit">0</div>
+      </div>
     </header>
 
     <div class="timer">
       <h2>Timer:</h2>
-      <p>00 : 00 : 00</p>
+      <div class="time">
+        <span class="digit" id="hours">00</span><span class="text">Hour</span
+        ><span class="digit" id="minutes">00</span><span class="text">Min</span
+        ><span class="digit" id="seconds">00</span><span class="text">Sec</span
+        ><span class="digit" id="counts">00</span>
+      </div>
     </div>
 
     <div class="game-buttons">
-      <button class="button" alt="play-button">
+      <button class="button" id="start" alt="play-button">
         <svg
           width="50px"
           height="50px"
@@ -58,6 +39,34 @@
           <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
           <path
             d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z"
+          />
+        </svg>
+      </button>
+
+      <button class="button" id="stop" alt="stop-button">
+        <svg
+          width="50px"
+          height="50px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+        >
+          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160C96 124.7 124.7 96 160 96z"
+          />
+        </svg>
+      </button>
+
+      <button class="button" id="reset" alt="reset-button">
+        <svg
+          width="50px"
+          height="50px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+        >
+          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M552 256L408 256C398.3 256 389.5 250.2 385.8 241.2C382.1 232.2 384.1 221.9 391 215L437.7 168.3C362.4 109.7 253.4 115 184.2 184.2C109.2 259.2 109.2 380.7 184.2 455.7C259.2 530.7 380.7 530.7 455.7 455.7C463.9 447.5 471.2 438.8 477.6 429.6C487.7 415.1 507.7 411.6 522.2 421.7C536.7 431.8 540.2 451.8 530.1 466.3C521.6 478.5 511.9 490.1 501 501C401 601 238.9 601 139 501C39.1 401 39 239 139 139C233.3 44.7 382.7 39.4 483.3 122.8L535 71C541.9 64.1 552.2 62.1 561.2 65.8C570.2 69.5 576 78.3 576 88L576 232C576 245.3 565.3 256 552 256z"
           />
         </svg>
       </button>
@@ -171,6 +180,67 @@
       <div class="scoreboard-letter" id="letter-H8"></div>
       <div class="scoreboard-letter" id="letter-H9"></div>
       <div class="scoreboard-letter" id="letter-H10"></div>
+    </div>
+
+    <div class="image-hint">
+      <img class="page-img" src="./fishing-boat.png" />
+
+      <div class="text-container">
+        <h2 class="hint-header">Want a hint?</h2>
+        <div class="hint-container">
+          <button class="button" id="hint-button-1">
+            <svg
+              width="50px"
+              height="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
+              />
+            </svg>
+          </button>
+          <div class="hint-text hidden" id="hint-text-1"></div>
+
+          <button class="button" id="hint-button-2">
+            <svg
+              width="50px"
+              height="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
+              />
+            </svg>
+          </button>
+          <div class="hint-text hidden" id="hint-text-2"></div>
+
+          <button class="button" id="hint-button-3">
+            <svg
+              width="50px"
+              height="50px"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"
+              />
+            </svg>
+          </button>
+          <div class="hint-text hidden" id="hint-text-3"></div>
+        </div>
+        <p class="img-credit">
+          <a
+            href="https://www.flaticon.com/free-stickers/ship"
+            title="ship stickers"
+            >Ship stickers created by Stickers - Flaticon</a
+          >
+        </p>
+      </div>
     </div>
   </body>
 </html>

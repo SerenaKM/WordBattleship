@@ -17,6 +17,9 @@
   --brown-bounce: rgba(142, 88, 58, 1);
   --sunny-day: rgba(255, 227, 155, 1);
   --sky-why: rgb(134, 210, 255, 1);
+  --boat-pink: rgba(253, 128, 166, 1);
+  --boat-border: rgba(246, 96, 142, 1);
+  --boat-by-the-sea: #93f6f8;
 }
 
 body {
@@ -32,23 +35,29 @@ a {
   text-decoration: none;
 }
 
-.navbar {
+.navbar,
+.image-hint {
   padding: 10px;
   text-align: center;
   margin-bottom: 0;
   display: grid;
-  grid-template-columns: 100px 3fr 100px;
-  padding: 50px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
 }
 
-.nav__list {
-  list-style: none;
-  display: flex;
+select {
+  width: 50px;
+  height: 40px;
 }
 
-.nav__list-item {
-  margin-inline-end: 36px; /* using inline-end for more responsiveness to different languages */
-  font-size: 20px;
+.brand {
+  grid-column: 2;
+  text-align: center;
+}
+
+.options {
+  grid-column: 2;
+  justify-self: end;
 }
 
 h1 {
@@ -68,6 +77,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+.digit {
+  font-size: 2rem;
+}
+
+.text {
+  font-size: 1rem;
+}
+
 .game-buttons {
   display: flex;
   justify-content: center;
@@ -76,9 +93,10 @@ h1 {
 
 button {
   border: 3px solid var(--violet-leaf);
-  background-color: var(--peach-burst);
+  background-color: var(--boat-pink);
   fill: var(--lavender-blossom);
   border-radius: 20%;
+  margin: 5px;
 }
 
 button:hover {
@@ -145,4 +163,41 @@ button:hover {
 .wrong {
   background-color: var(--lippy);
   color: white;
+}
+
+.text-container {
+  grid-column: 2;
+}
+
+.page-img {
+  grid-column: 1;
+}
+
+.hint-text {
+  width: 580px;
+  height: 100px;
+  background-color: var(--boat-by-the-sea);
+  border: 2px solid var(--lavender-blossom);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1760px) {
+  .page-img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .page-img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .page-img {
+    display: none;
+  }
 }
