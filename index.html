@@ -10,23 +10,25 @@
 
   <body>
     <header class="navbar">
-      <h1 class="brand">Word Battleship</h1>
-
       <div class="score">
         <h2>Score</h2>
         <div class="digit">0</div>
       </div>
-    </header>
 
-    <div class="timer">
-      <h2>Timer:</h2>
-      <div class="time">
-        <span class="digit" id="hours">00</span><span class="text">Hour</span
-        ><span class="digit" id="minutes">00</span><span class="text">Min</span
-        ><span class="digit" id="seconds">00</span><span class="text">Sec</span
-        ><span class="digit" id="counts">00</span>
+      <h1 class="brand">Word Battleship</h1>
+
+      <div class="timer">
+        <h2>Timer:</h2>
+        <div class="time">
+          <span class="digit" id="hours">00</span><span class="text">Hr</span
+          ><span class="digit" id="minutes">00</span
+          ><span class="text">Min</span
+          ><span class="digit" id="seconds">00</span
+          ><span class="text">Sec</span
+          ><span class="digit" id="counts">00</span>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div class="game-buttons">
       <button class="button" id="start" alt="play-button">
@@ -72,115 +74,832 @@
       </button>
     </div>
 
-    <div class="scoreboard">
-      <div class="grid-letter" id="letter-0"></div>
-      <div class="grid-letter" id="letter-1">1</div>
-      <div class="grid-letter" id="letter-2">2</div>
-      <div class="grid-letter" id="letter-3">3</div>
-      <div class="grid-letter" id="letter-4">4</div>
-      <div class="grid-letter" id="letter-5">5</div>
-      <div class="grid-letter" id="letter-6">6</div>
-      <div class="grid-letter" id="letter-7">7</div>
-      <div class="grid-letter" id="letter-8">8</div>
-      <div class="grid-letter" id="letter-9">9</div>
-      <div class="grid-letter" id="letter-10">10</div>
-
-      <div class="grid-letter" id="letter-A">A</div>
-      <div class="scoreboard-letter" id="letter-A1"></div>
-      <div class="scoreboard-letter" id="letter-A2"></div>
-      <div class="scoreboard-letter" id="letter-A3"></div>
-      <div class="scoreboard-letter" id="letter-A4"></div>
-      <div class="scoreboard-letter" id="letter-A5"></div>
-      <div class="scoreboard-letter" id="letter-A6"></div>
-      <div class="scoreboard-letter" id="letter-A7"></div>
-      <div class="scoreboard-letter" id="letter-A8"></div>
-      <div class="scoreboard-letter" id="letter-A9"></div>
-      <div class="scoreboard-letter" id="letter-A10"></div>
-
-      <div class="grid-letter" id="letter-B">B</div>
-      <div class="scoreboard-letter" id="letter-B1"></div>
-      <div class="scoreboard-letter" id="letter-B2"></div>
-      <div class="scoreboard-letter" id="letter-B3"></div>
-      <div class="scoreboard-letter" id="letter-B4"></div>
-      <div class="scoreboard-letter" id="letter-B5"></div>
-      <div class="scoreboard-letter" id="letter-B6"></div>
-      <div class="scoreboard-letter" id="letter-B7"></div>
-      <div class="scoreboard-letter" id="letter-B8"></div>
-      <div class="scoreboard-letter" id="letter-B9"></div>
-      <div class="scoreboard-letter" id="letter-B10"></div>
-
-      <div class="grid-letter" id="letter-C">C</div>
-      <div class="scoreboard-letter" id="letter-C1"></div>
-      <div class="scoreboard-letter" id="letter-C2"></div>
-      <div class="scoreboard-letter" id="letter-C3"></div>
-      <div class="scoreboard-letter" id="letter-C4"></div>
-      <div class="scoreboard-letter" id="letter-C5"></div>
-      <div class="scoreboard-letter" id="letter-C6"></div>
-      <div class="scoreboard-letter" id="letter-C7"></div>
-      <div class="scoreboard-letter" id="letter-C8"></div>
-      <div class="scoreboard-letter" id="letter-C9"></div>
-      <div class="scoreboard-letter" id="letter-C10"></div>
-
-      <div class="grid-letter" id="letter-D">D</div>
-      <div class="scoreboard-letter" id="letter-D1"></div>
-      <div class="scoreboard-letter" id="letter-D2"></div>
-      <div class="scoreboard-letter" id="letter-D3"></div>
-      <div class="scoreboard-letter" id="letter-D4"></div>
-      <div class="scoreboard-letter" id="letter-D5"></div>
-      <div class="scoreboard-letter" id="letter-D6"></div>
-      <div class="scoreboard-letter" id="letter-D7"></div>
-      <div class="scoreboard-letter" id="letter-D8"></div>
-      <div class="scoreboard-letter" id="letter-D9"></div>
-      <div class="scoreboard-letter" id="letter-D10"></div>
-
-      <div class="grid-letter" id="letter-E">E</div>
-      <div class="scoreboard-letter" id="letter-E1"></div>
-      <div class="scoreboard-letter" id="letter-E2"></div>
-      <div class="scoreboard-letter" id="letter-E3"></div>
-      <div class="scoreboard-letter" id="letter-E4"></div>
-      <div class="scoreboard-letter" id="letter-E5"></div>
-      <div class="scoreboard-letter" id="letter-E6"></div>
-      <div class="scoreboard-letter" id="letter-E7"></div>
-      <div class="scoreboard-letter" id="letter-E8"></div>
-      <div class="scoreboard-letter" id="letter-E9"></div>
-      <div class="scoreboard-letter" id="letter-E10"></div>
-
-      <div class="grid-letter" id="letter-F">F</div>
-      <div class="scoreboard-letter" id="letter-F1"></div>
-      <div class="scoreboard-letter" id="letter-F2"></div>
-      <div class="scoreboard-letter" id="letter-F3"></div>
-      <div class="scoreboard-letter" id="letter-F4"></div>
-      <div class="scoreboard-letter" id="letter-F5"></div>
-      <div class="scoreboard-letter" id="letter-F6"></div>
-      <div class="scoreboard-letter" id="letter-F7"></div>
-      <div class="scoreboard-letter" id="letter-F8"></div>
-      <div class="scoreboard-letter" id="letter-F9"></div>
-      <div class="scoreboard-letter" id="letter-F10"></div>
-
-      <div class="grid-letter" id="letter-G">G</div>
-      <div class="scoreboard-letter" id="letter-G1"></div>
-      <div class="scoreboard-letter" id="letter-G2"></div>
-      <div class="scoreboard-letter" id="letter-G3"></div>
-      <div class="scoreboard-letter" id="letter-G4"></div>
-      <div class="scoreboard-letter" id="letter-G5"></div>
-      <div class="scoreboard-letter" id="letter-G6"></div>
-      <div class="scoreboard-letter" id="letter-G7"></div>
-      <div class="scoreboard-letter" id="letter-G8"></div>
-      <div class="scoreboard-letter" id="letter-G9"></div>
-      <div class="scoreboard-letter" id="letter-G10"></div>
-
-      <div class="grid-letter" id="letter-H">H</div>
-      <div class="scoreboard-letter" id="letter-H1"></div>
-      <div class="scoreboard-letter" id="letter-H2"></div>
-      <div class="scoreboard-letter" id="letter-H3"></div>
-      <div class="scoreboard-letter" id="letter-H4"></div>
-      <div class="scoreboard-letter" id="letter-H5"></div>
-      <div class="scoreboard-letter" id="letter-H6"></div>
-      <div class="scoreboard-letter" id="letter-H7"></div>
-      <div class="scoreboard-letter" id="letter-H8"></div>
-      <div class="scoreboard-letter" id="letter-H9"></div>
-      <div class="scoreboard-letter" id="letter-H10"></div>
+    <div class="guess">
+      <h3>
+        To make a guess, either press the "Enter" key after typing the word or
+        click the "Guess" button!
+      </h3>
+      <button class="guess-button" type="button">Guess!</button>
     </div>
+
+    <form id="scoreboard">
+      <!-- to take advantage of the form.reset() method -->
+      <div class="row" id="row-A">
+        <div class="scoreboard-item">
+          <label for="letter-A0">A0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A0"
+            name="letter-A0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A1">A1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A1"
+            name="letter-A1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A2">A2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A2"
+            name="letter-A2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A3">A3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A3"
+            name="letter-A3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A4">A4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A4"
+            name="letter-A4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A5">A5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A5"
+            name="letter-A5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A6">A6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A6"
+            name="letter-A6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A7">A7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A7"
+            name="letter-A7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A8">A8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A8"
+            name="letter-A8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-A9">A9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-A9"
+            name="letter-A9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-B">
+        <div class="scoreboard-item">
+          <label for="letter-B0">B0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B0"
+            name="letter-B0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B1">B1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B1"
+            name="letter-B1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B2">B2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B2"
+            name="letter-B2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B3">B3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B3"
+            name="letter-B3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B4">B4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B4"
+            name="letter-B4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B5">B5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B5"
+            name="letter-B5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B6">B6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B6"
+            name="letter-B6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B7">B7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B7"
+            name="letter-B7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B8">B8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B8"
+            name="letter-B8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-B9">B9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-B9"
+            name="letter-B9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-C">
+        <div class="scoreboard-item">
+          <label for="letter-C0">C0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C0"
+            name="letter-C0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C1">C1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C1"
+            name="letter-C1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C2">C2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C2"
+            name="letter-C2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C3">C3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C3"
+            name="letter-C3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C4">C4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C4"
+            name="letter-C4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C5">C5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C5"
+            name="letter-C5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C6">C6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C6"
+            name="letter-C6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C7">C7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C7"
+            name="letter-C7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C8">C8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C8"
+            name="letter-C8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-C9">C9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-C9"
+            name="letter-C9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-D">
+        <div class="scoreboard-item">
+          <label for="letter-D0">D0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D0"
+            name="letter-D0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D1">D1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D1"
+            name="letter-D1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D2">D2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D2"
+            name="letter-D2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D3">D3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D3"
+            name="letter-D3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D4">D4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D4"
+            name="letter-D4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D5">D5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D5"
+            name="letter-D5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D6">D6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D6"
+            name="letter-D6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D7">D7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D7"
+            name="letter-D7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D8">D8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D8"
+            name="letter-D8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-D9">D9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-D9"
+            name="letter-D9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-E">
+        <div class="scoreboard-item">
+          <label for="letter-E0">E0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E0"
+            name="letter-E0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E1">E1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E1"
+            name="letter-E1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E2">E2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E2"
+            name="letter-E2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E3">E3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E3"
+            name="letter-E3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E4">E4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E4"
+            name="letter-E4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E5">E5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E5"
+            name="letter-E5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E6">E6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E6"
+            name="letter-E6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E7">E7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E7"
+            name="letter-E7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E8">E8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E8"
+            name="letter-E8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-E9">E9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-E9"
+            name="letter-E9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-F">
+        <div class="scoreboard-item">
+          <label for="letter-F0">F0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F0"
+            name="letter-F0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F1">F1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F1"
+            name="letter-F1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F2">F2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F2"
+            name="letter-F2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F3">F3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F3"
+            name="letter-F3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F4">F4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F4"
+            name="letter-F4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F5">F5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F5"
+            name="letter-F5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F6">F6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F6"
+            name="letter-F6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F7">F7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F7"
+            name="letter-F7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F8">F8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F8"
+            name="letter-F8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-F9">F9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-F9"
+            name="letter-F9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-G">
+        <div class="scoreboard-item">
+          <label for="letter-G0">G0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G0"
+            name="letter-G0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G1">G1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G1"
+            name="letter-G1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G2">G2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G2"
+            name="letter-G2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G3">G3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G3"
+            name="letter-G3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G4">G4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G4"
+            name="letter-G4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G5">G5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G5"
+            name="letter-G5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G6">G6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G6"
+            name="letter-G6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G7">G7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G7"
+            name="letter-G7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G8">G8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G8"
+            name="letter-G8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-G9">G9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-G9"
+            name="letter-G9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+
+      <div class="row" id="row-H">
+        <div class="scoreboard-item">
+          <label for="letter-H0">H0</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H0"
+            name="letter-H0"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H1">H1</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H1"
+            name="letter-H1"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H2">H2</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H2"
+            name="letter-H2"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H3">H3</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H3"
+            name="letter-H3"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H4">H4</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H4"
+            name="letter-H4"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H5">H5</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H5"
+            name="letter-H5"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H6">H6</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H6"
+            name="letter-H6"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H7">H7</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H7"
+            name="letter-H7"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H8">H8</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H8"
+            name="letter-H8"
+            maxlength="1"
+          />
+        </div>
+
+        <div class="scoreboard-item">
+          <label for="letter-H9">H9</label>
+          <input
+            class="scoreboard-letter"
+            id="letter-H9"
+            name="letter-H9"
+            maxlength="1"
+          />
+        </div>
+      </div>
+    </form>
 
     <div class="image-hint">
       <img class="page-img" src="./fishing-boat.png" />

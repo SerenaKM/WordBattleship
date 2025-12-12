@@ -37,11 +37,11 @@ a {
 
 .navbar,
 .image-hint {
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   text-align: center;
   margin-bottom: 0;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 
@@ -91,12 +91,19 @@ h1 {
   align-items: center;
 }
 
+.guess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   border: 3px solid var(--violet-leaf);
   background-color: var(--boat-pink);
   fill: var(--lavender-blossom);
   border-radius: 20%;
   margin: 5px;
+  font-size: 20px;
 }
 
 button:hover {
@@ -109,14 +116,21 @@ button:hover {
   font-size: 30px;
 }
 
-.scoreboard {
+#scoreboard {
   max-width: 600px;
   width: 100%;
   margin: 10px auto;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 10px;
-  column-gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 20px;
 }
 
 .scoreboard-letter {
@@ -133,10 +147,10 @@ button:hover {
   border-radius: 10%;
 }
 
-.grid-letter {
+label {
   height: 45px;
   width: 45px;
-  font-size: 30px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   border: none;
   font-weight: bold;
@@ -150,12 +164,12 @@ button:hover {
   border: none;
 }
 
-.grid-letter .correct {
+.correct {
   background-color: var(--livery-green);
   color: white;
 }
 
-.close {
+.hint {
   background-color: var(--dairy-made);
   color: white;
 }
