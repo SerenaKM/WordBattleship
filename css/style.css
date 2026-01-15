@@ -91,7 +91,8 @@ h1 {
   align-items: center;
 }
 
-.guess {
+.guess,
+.difficulty {
   display: flex;
   justify-content: center;
   align-items: center;
